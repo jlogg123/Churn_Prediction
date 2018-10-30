@@ -24,7 +24,7 @@ testX <- testX[,colSums(is.na(testX))<=0.9*nrow(testX)]
 training <- trainX
 training$churn <- trainY$churn
 
-#=====using subset for local computation (20%) of data======
+#=====using subset for local computation (20%) of data; commented out if not applicable======
 small_data <- training##[1:sum(0.2*length(training[,1])),]
 
 #removing columns with more that 70% empty values
